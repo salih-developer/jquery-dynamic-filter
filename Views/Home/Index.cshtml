@@ -4,6 +4,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("#myFilter").structFilter({
+            buttonLabels: true,
+            submitButton: true,
             fields: [
                 {id:"lastname", type:"text", label:"Lastname"},
                 {id:"firstname", type:"text", label:"Firstname"},
@@ -20,6 +22,9 @@
                     ]
                 }
             ]
+        });
+        $("#myFilter").on("submit.search", function(event) {
+            alert('hi');
         });
     });
 </script>
